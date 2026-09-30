@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#111111">
+  <meta name="description" content="Catálogo de fotografias de carros para quadros.">
+  <title>Quadros de Carros | Seu Nome</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">FOTOGRAFIA AUTOMOTIVA</p>
+    <h1>Seu carro pode virar um quadro.</h1>
+    <p class="lead">Escolha uma foto do catálogo ou peça uma sessão personalizada do seu carro.</p>
+    <div class="hero-actions">
+      <a class="btn primary" href="#catalogo">Ver catálogo</a>
+      <a class="btn ghost" href="#personalizado">Fotografar meu carro</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="catalogo" class="section">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">CATÁLOGO</p>
+        <h2>Escolha sua foto</h2>
+      </div>
+      <input id="busca" class="search" type="search" placeholder="Buscar carro ou código..." aria-label="Buscar">
+    </div>
+
+    <div id="eventos" class="events"></div>
+    <div id="catalogo-vazio" class="empty" hidden>Nenhuma foto encontrada.</div>
+  </section>
+
+  <section class="section price-section">
+    <p class="eyebrow">QUADROS</p>
+    <h2>Tamanhos e valores</h2>
+    <div class="price-grid">
+      <div class="price-card">
+        <h3>Sem moldura</h3>
+        <p>20 × 30 cm <strong>R$ 00</strong></p>
+        <p>30 × 45 cm <strong>R$ 00</strong></p>
+        <p>40 × 60 cm <strong>R$ 00</strong></p>
+      </div>
+      <div class="price-card">
+        <h3>Com moldura</h3>
+        <p>20 × 30 cm <strong>R$ 00</strong></p>
+        <p>30 × 45 cm <strong>R$ 00</strong></p>
+        <p>40 × 60 cm <strong>R$ 00</strong></p>
+      </div>
+    </div>
+    <p class="note">Os valores acima são exemplos. Edite os preços no arquivo <code>script.js</code>.</p>
+  </section>
+
+  <section id="personalizado" class="section custom-section">
+    <div>
+      <p class="eyebrow">PERSONALIZADO</p>
+      <h2>Quer seu próprio carro em um quadro?</h2>
+      <p>Posso fotografar seu carro e preparar a imagem para impressão. Entre em contato para combinar local, horário e orçamento.</p>
+      <a id="whatsapp-custom" class="btn primary" href="#" target="_blank" rel="noopener">Falar pelo WhatsApp</a>
+    </div>
+  </section>
+
+  <section class="section about">
+    <h2>Sobre as fotos</h2>
+    <p>As imagens deste catálogo são exibidas em resolução reduzida e com marca-d'água para proteção. A versão em alta resolução é fornecida somente após a compra/autorização.</p>
+    <p class="copyright">© <span id="ano"></span> Seu Nome — Todos os direitos reservados.</p>
+  </section>
+</main>
+
+<footer>
+  <strong>Seu Nome Fotografia</strong>
+  <div class="footer-links">
+    <a id="instagram" href="#" target="_blank" rel="noopener">Instagram</a>
+    <a id="whatsapp-footer" href="#" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</footer>
+
+<div id="modal" class="modal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <button class="close" data-close aria-label="Fechar">×</button>
+    <img id="modal-img" src="" alt="">
+    <div class="modal-info">
+      <p class="code" id="modal-code"></p>
+      <h3 id="modal-title"></h3>
+      <p id="modal-event"></p>
+      <p class="modal-help">Gostou desta foto? Informe o código ao fazer o pedido.</p>
+      <a id="modal-whatsapp" class="btn primary full" href="#" target="_blank" rel="noopener">Quero esta foto</a>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
